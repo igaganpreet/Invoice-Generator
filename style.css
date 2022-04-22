@@ -1,93 +1,106 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+
+:root {
+	--white: #ffffff;
+	--black: #000;
+	--headerBackground:#F5F5F5;
+	--lightBorder:#D5D4D8;
+	--darkFont:#4A4E74;
+	--lightHeading:#918E9B;
+  }
+
 * {
 	box-sizing: border-box;
 }
 
 body {
-	font-family: 'Inter', sans-serif;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin: 0;
+	font-family: 'Inter', sans-serif;	
 	height: 100vh;
 	overflow: hidden;
-	background-color: black;
+	background-color: var(--black);
 	user-select: none;
 }
+
 .main{
-	background-color: white;
+	background-color: var(--white);
 	height:85vh;
 	width: 70vh;
 }
-.header-block{
+
+body, .header-block{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background: #F5F5F5;
-	height: 25vh;
-	width: inherit;
-	padding:0 6vh ;
 }
+
+.heading, .listTask, .notes-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.heading, .notes-container{
+	color: var(--lightHeading);
+}
+body, h1,h5, h6 {
+	margin:0;
+}
+.taskName,#total-cost{
+	font-weight: 700;	
+}
+h5, .taskCost{
+	font-weight: 400;
+}
+
+.detail-block, .header-block{
+	padding:0 4vh ;
+}
+
+
 h1{
 	font-size: 2.5em;
 	font-weight: 800;
-	letter-spacing: -0.02em;
-	margin: 0;
 	margin-top: 1.5vh;
 }
 h5{
 	font-size: 0.9em;
-	font-weight: 400;
-	margin:1vh 0 0 0; 
-	letter-spacing: 0em;
-	text-align: center;
+	margin-top:1vh;
+}
+h6{
+	font-weight: 600;
+}
 
+.header-block{
+	background: var(--headerBackground);
+	height: 25vh;
 }
-.detail-block{
-	width: inherit;
-	padding:0 4vh ;
-}
+
 .buttons{
-	margin-top: 5vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	padding: auto;
+	margin-top: 4vh;	
 	margin-bottom: 10px;
 }
 
 .job-select{
-	background-color: white;
-	border: 1px solid #D5D4D8;
+	background-color: var(--white);
+	border: 1px solid var(--lightBorder);
 	border-radius: 7px;
 	padding: 9px 13px;
-	color: #4A4E74;
+	color: var(--darkFont);
 }
 .job-select:focus{
-	border: 2px solid #4A4E74;
+	border: 2px solid var(--darkFont);
 }
 .notes-heading{
-	border-top:1px solid #C3C6DB;
+	 border-top:1px solid var(--lightBorder);
 	padding-top: 5%;
 }
 .task-heading{
 	padding-top:3%;
-}
-.heading{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	color:#918E9B;
-	
-}
-.heading h6{
-	font-weight: 600;
-	box-sizing: border-box;
-	margin: 0;
 }
 
 #send-invoice{
@@ -95,50 +108,25 @@ h5{
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 	border-radius: 7px;
 	width: 100%;
-	color: white;
+	color: var(--white);
 	padding: 10px;
 	border: none;
-	margin-top:30px;
+	margin-top:4vh;
 }
 #send-invoice i{
 	padding:0 10px;
 }
-.listTask{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-
-}
 .listTask p{
-	color: #4A4E74;
+	color: var(--darkFont);
 	font-size: 1.2em;
 	margin:5px 0;
-	padding: 0px;
-}
-.taskName{
-	font-weight: 700;
-	
-}
-.taskCost{
-	font-weight: 400;
-
 }
 #tasks{
 	margin-bottom: 20px;
 	margin-top:10px;
 }
-.notes-container{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	color:#918E9B;
-}
-
 #total-cost{
-	/* color: #4A4E74; */
 	font-size: 1.8em;
-	font-weight: 700;
 	margin:5px 0;
 	padding: 0px;
 }
