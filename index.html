@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Invoice generator</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header-block">
+            <h1>Invoice creator</h1>
+            <h5>Thanks for choosing GoodCorp, LLC!</h5>
+        </div>
+        <div class="detail-block">
+            <div class="buttons">
+                <button class="job-select" id="wash">Wash Car: $10</button>
+                <button class="job-select" id="mow">Mow Lawn: $20</button>
+                <button class="job-select" id="pull-weed">Pull Weeds: $30</button>
+            </div>
+            <div class="heading task-heading">
+                <h6>TASK</h6>
+                <H6>TOTAL</H6>
+            </div>
+            <div id="tasks">
+                
+            </div>
+            <div class="heading notes-heading">
+                <h6>NOTES</h6>
+                <H6>TOTAL AMOUNT</H6>
+            </div>
+            <div class="notes-container">
+                <p id="note-el"></p>
+                <p id="total-cost">$0</p>
+            </div>
+            <button id="send-invoice"><i class="fa-solid fa-envelope"></i>Send invoice</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
